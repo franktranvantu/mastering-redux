@@ -1,9 +1,6 @@
-function sayHello() {
-  return function() {
-    return 'Hello World';
-  }
-}
+const numbers = [1, 2, 3];
+numbers.map(number => number * 2); // map is higher-order function
 
-const fn = sayHello();
-const message = fn();
-console.log(message);
+setTimeout(() => {
+  console.log('Hello World')
+}, 1000);
