@@ -1,1 +1,1 @@
-# Action Types
+# Action Creators
