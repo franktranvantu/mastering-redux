@@ -1,1 +1,1 @@
-# Creating Slices
+# Adding Projects Slice
