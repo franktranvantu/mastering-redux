@@ -1,22 +1,18 @@
-const person = {
-  name: 'Frank',
-  address: {
-    city: 'Go Vap'
-  }
-};
+const numbers = [1, 2, 3];
 
-// const updated = Object.assign({}, person, {name: 'Tu', age: 28});
-// const updated = {...person, name: 'Tu', age: 28};
-const updated = {
-  ...person,
-  name: 'Tu', // Shadow copy
-  age: 28,
-  address: { // Deep copy
-    ...person.address,
-    city: 'Tan Binh'
-  }
-};
+// Adding
+// const added = [...numbers, 4, 5];
+// const added = [4, 5, ...numbers];
+const index = numbers.indexOf(2);
+const added = [...numbers.slice(0, index), 4, 5, ...numbers.slice(index)];
+console.log('Added: ' + added);
 
-console.log(person);
-console.log(updated);
+// Removing
+const removed = numbers.filter(n => n !== 2);
+console.log('Removed: ' + removed);
 
+// Updating
+const updated = numbers.map(n => n === 2 ? 20 : n);
+console.log('Updated: ' + updated);
+
+console.log('Numbers: ' + numbers);
