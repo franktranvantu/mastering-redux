@@ -7,5 +7,6 @@ const trim = str => str.trim();
 const wrapInDiv = str => `<div>${str}</div>`;
 const toLowerCase = str => str.toLowerCase();
 
-const compose = compose(wrapInDiv, toLowerCase, trim);
-const pipe = pipe(trim, toLowerCase, wrapInDiv);
+// const transform = compose(wrapInDiv, toLowerCase, trim);
+const transform = pipe(trim, toLowerCase, wrapInDiv);
+console.log(transform(input));
