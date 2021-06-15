@@ -1,1 +1,1 @@
-# Creating a Reducer
+# Creating the Store
