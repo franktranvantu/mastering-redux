@@ -1,5 +1,21 @@
-# Your First Redux App
+# Designing the Store
 
-```bash
-npm i redux
+```javascript
+[
+  {
+    id: 1,
+    description: '',
+    resolved: false
+  },
+  {
+    id: 2,
+    description: '',
+    resolved: false
+  },
+  {
+    id: 3,
+    description: '',
+    resolved: false
+  }
+]
 ```
