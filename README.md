@@ -1,1 +1,1 @@
-# Subscribing to the Store
+# Installing Redux DevTools
