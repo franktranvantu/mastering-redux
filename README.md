@@ -1,1 +1,1 @@
-# Creating custom store
+# Dispatching Actions
