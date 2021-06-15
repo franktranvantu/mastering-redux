@@ -11,3 +11,10 @@
 - Calling APIs
 - Testing Redux apps
 - Integration with React
+
+## Setting Up Project
+```bash
+npm i 
+npm start
+```
+Open browser at port 9000
