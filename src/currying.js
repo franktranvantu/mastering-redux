@@ -8,5 +8,8 @@ function add2(a) {
   }
 }
 
+const add3 = a => b => a + b;
+
 add(1, 2);
 add2(1)(2); // add2(1, 2)
+add3(1)(2); // add3(1, 2)
