@@ -1,5 +1,5 @@
-# Immutable.js
+# Immer
 
 ```bash
-npm i immutable
+npm i immer
 ```

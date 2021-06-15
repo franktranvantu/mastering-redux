@@ -1,14 +1,16 @@
-import {Map} from 'immutable';
+import {produce} from 'immer';
 
-const book = Map({
+const book = {
   title: 'Java Fundamental'
-});
+};
 
 function publish(book) {
-  return book.set('isPublish', true);
+  return produce(book, updatedBook => {
+    updatedBook.isPublished = true;
+  });
 }
 
 const publishedBook = publish(book);
 
-console.log(book.toJS());
-console.log(publishedBook.toJS());
+console.log(book);
+console.log(publishedBook);
