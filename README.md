@@ -1,1 +1,1 @@
-# Pure Functions
+# Immutability

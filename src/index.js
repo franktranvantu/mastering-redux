@@ -1,7 +1,5 @@
-function getRandom() { // Not a pure function
-  return Math.random();
-}
+const name = 'Frank';
+const upperCaseName = name.toUpperCase();
 
-function getDoubledNumber(number) { // Pure function
-  return number * 2;
-}
+const book = {};
+book.title = 'Java Fundamental';
