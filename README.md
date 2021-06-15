@@ -1,1 +1,1 @@
-# Dispatching Actions
+# Subscribing to the Store
