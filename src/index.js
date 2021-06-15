@@ -10,7 +10,8 @@ store.dispatch(bugAdded({description: 'Bug 2'}));
 store.dispatch(bugAdded({description: 'Bug 3'}));
 store.dispatch(bugResolved({id: 1}));
 
-const unresolvedBugs = getUnresolvedBugs(store.getState());
+const x = getUnresolvedBugs(store.getState());
+const y = getUnresolvedBugs(store.getState());
 
 console.log(store.getState());
-console.log(unresolvedBugs);
+console.log(x === y);

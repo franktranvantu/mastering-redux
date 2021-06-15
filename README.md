@@ -1,1 +1,1 @@
-# Selectors
+# Memoizing Selectors with Reselect

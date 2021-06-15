@@ -1,6 +1,9 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, createSelector} from '@reduxjs/toolkit';
 
-export const getUnresolvedBugs = state => state.entities.bugs.filter(bug => !bug.resolved);
+export const getUnresolvedBugs = createSelector(
+  state => state.entities.bugs,
+  bugs => bugs.filter(bug => !bug.resolved)
+)
 
 let bugSize = 0;
 const slice = createSlice({
