@@ -15,8 +15,3 @@ store.dispatch(bugAdded({description: 'Bug 2'}));
 store.dispatch(bugAdded({description: 'Bug 3'}));
 store.dispatch(bugAssignedToUser({bugId: 1, userId: 1}));
 store.dispatch(bugResolved({id: 1}));
-
-const bugsByUser = getBugsByUser(1)(store.getState());
-
-console.log(store.getState());
-console.log(bugsByUser);
