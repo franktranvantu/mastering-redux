@@ -1,6 +1,8 @@
-const numbers = [1, 2, 3];
-numbers.map(number => number * 2); // map is higher-order function
+const input = '   JavaScript   ';
+const output = 'div' + input.trim().toLowerCase() + '</div';
 
-setTimeout(() => {
-  console.log('Hello World')
-}, 1000);
+const trim = str => str.trim();
+const wrapInDiv = str => `<div>${str}</div>`;
+const toLowerCase = str => str.toLowerCase();
+
+const result = wrapInDiv(toLowerCase(trim(input)));
