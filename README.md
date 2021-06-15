@@ -1,5 +1,1 @@
-# Tracing
-
-```bash
-npm i redux-devtools-extension
-```
+# Exporting and Importing
