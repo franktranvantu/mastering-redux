@@ -1,18 +1,14 @@
-const numbers = [1, 2, 3];
+import {Map} from 'immutable';
 
-// Adding
-// const added = [...numbers, 4, 5];
-// const added = [4, 5, ...numbers];
-const index = numbers.indexOf(2);
-const added = [...numbers.slice(0, index), 4, 5, ...numbers.slice(index)];
-console.log('Added: ' + added);
+const book = Map({
+  title: 'Java Fundamental'
+});
 
-// Removing
-const removed = numbers.filter(n => n !== 2);
-console.log('Removed: ' + removed);
+function publish(book) {
+  return book.set('isPublish', true);
+}
 
-// Updating
-const updated = numbers.map(n => n === 2 ? 20 : n);
-console.log('Updated: ' + updated);
+const publishedBook = publish(book);
 
-console.log('Numbers: ' + numbers);
+console.log(book.toJS());
+console.log(publishedBook.toJS());
