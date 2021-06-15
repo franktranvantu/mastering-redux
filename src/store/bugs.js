@@ -1,5 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
 
+export const getUnresolvedBugs = (state) => {
+  return state.entities.bugs.filter(bug => !bug.resolved);
+}
+
 let bugSize = 0;
 const slice = createSlice({
   name: 'bugs',
