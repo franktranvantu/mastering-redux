@@ -8,7 +8,7 @@ const slice = createSlice({
     projectAdded: (projects, action) => {
       projects.push({
         id: ++projectSize,
-        name: action.payload.name,
+        name: action.payload.name
       });
     }
   }

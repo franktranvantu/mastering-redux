@@ -1,1 +1,1 @@
-# Adding Projects Slice
+# Combining Reducers
