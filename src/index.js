@@ -1,5 +1,4 @@
 import store from "./store";
-import * as actions from "./actionTypes";
 import {bugAdded, bugResolved} from "./actions";
 
 store.dispatch(bugAdded('Bug 1'));
