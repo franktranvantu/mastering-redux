@@ -1,1 +1,5 @@
-# Function Composition
+# Composing and Piping
+
+```bash
+npm i lodash
+```
