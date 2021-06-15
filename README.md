@@ -1,1 +1,1 @@
-# Action Creators
+# Creating custom store
