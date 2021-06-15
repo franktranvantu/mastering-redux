@@ -1,5 +1,5 @@
-# Immer
+# Your First Redux App
 
 ```bash
-npm i immer
+npm i redux
 ```
