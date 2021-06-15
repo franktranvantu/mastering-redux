@@ -1,10 +1,1 @@
-# Defining the Actions
-
-```javascript
-{
-  type: 'bugAdded',
-  payload: {
-    description: '...'
-  }
-}
-```
+# Creating a Reducer
