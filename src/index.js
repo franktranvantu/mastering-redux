@@ -1,11 +1,7 @@
-import {pipe} from 'lodash/fp';
+function getRandom() { // Not a pure function
+  return Math.random();
+}
 
-const input = '   JavaScript   ';
-const output = 'div' + input.trim().toLowerCase() + '</div';
-
-const trim = str => str.trim();
-const wrap = type => str => `<${type}>${str}</${type}>`;
-const toLowerCase = str => str.toLowerCase();
-
-const transform = pipe(trim, toLowerCase, wrap('div'));
-console.log(transform(input));
+function getDoubledNumber(number) { // Pure function
+  return number * 2;
+}

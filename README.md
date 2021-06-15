@@ -1,5 +1,1 @@
-# Composing and Piping
-
-```bash
-npm i lodash
-```
+# Pure Functions
