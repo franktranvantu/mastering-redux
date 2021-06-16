@@ -1,1 +1,5 @@
-# Loading Indicators
+# Caching
+
+```bash
+npm i moment
+```

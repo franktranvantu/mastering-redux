@@ -1,4 +1,5 @@
 import {createSlice, createSelector} from '@reduxjs/toolkit';
+import moment from "moment";
 import * as actions from "./api";
 
 let bugSize = 0;
@@ -19,6 +20,7 @@ const slice = createSlice({
     bugsReceived: (bugs, action) => {
       bugs.list = action.payload;
       bugs.loading = false;
+      bugs.lastFetch = Date.now();
     },
     bugAdded: (bugs, action) => {
       bugs.list.push({
@@ -57,9 +59,16 @@ export const getBugsByUser = userId => createSelector(
   bugs => bugs.filter(bug => bug.userId === userId)
 )
 
-export const loadBugs = () => actions.apiCallBegan({
-  url: '/bugs',
-  onStart: bugsRequested.type,
-  onSuccess: bugsReceived.type,
-  onError: bugsRequestFailed.type
-})
+export const loadBugs = () => (dispatch, getState) => {
+  const {lastFetch} = getState().entities.bugs;
+  const diffInMinutes = moment().diff(moment(lastFetch), 'minutes');
+  if (diffInMinutes < 10) {
+    return;
+  }
+  dispatch(actions.apiCallBegan({
+    url: '/bugs',
+    onStart: bugsRequested.type,
+    onSuccess: bugsReceived.type,
+    onError: bugsRequestFailed.type
+  }));
+}
