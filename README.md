@@ -1,1 +1,1 @@
-# Restructuring the Store
+# Getting Data from the Server
