@@ -10,8 +10,15 @@ const slice = createSlice({
     lastFetch: null
   },
   reducers: {
+    bugsRequested: (bugs, action) => {
+      bugs.loading = true
+    },
+    bugsRequestFailed: (bugs, action) => {
+      bugs.loading = false;
+    },
     bugsReceived: (bugs, action) => {
       bugs.list = action.payload;
+      bugs.loading = false;
     },
     bugAdded: (bugs, action) => {
       bugs.list.push({
@@ -37,7 +44,7 @@ const slice = createSlice({
   }
 });
 
-export const {bugAdded, bugResolved, bugRemoved, bugAssignedToUser, bugsReceived} = slice.actions;
+export const {bugAdded, bugResolved, bugRemoved, bugAssignedToUser, bugsRequested, bugsRequestFailed, bugsReceived} = slice.actions;
 export default slice.reducer;
 
 export const getUnresolvedBugs = createSelector(
@@ -52,5 +59,7 @@ export const getBugsByUser = userId => createSelector(
 
 export const loadBugs = () => actions.apiCallBegan({
   url: '/bugs',
-  onSuccess: bugsReceived.type
+  onStart: bugsRequested.type,
+  onSuccess: bugsReceived.type,
+  onError: bugsRequestFailed.type
 })
