@@ -1,1 +1,1 @@
-# Actions
+# Restructuring the Store
